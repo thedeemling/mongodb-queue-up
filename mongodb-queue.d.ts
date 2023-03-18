@@ -13,6 +13,7 @@ declare namespace mongodbQueue {
     add(payload: ArrayPayload, opts: QueueOptions, callback: QueueCallback<string[]>): void;
     get(callback: QueueCallback<QueueMessage | undefined>): void;
     get(opts: QueueOptions, callback: QueueCallback<QueueMessage | undefined>): void;
+    get(opts: QueueOptions, callback: QueueCallback<QueueMessage | undefined>, query: any): void;
     ping(ack: string, callback: QueueCallback<string>): void;
     ping(ack: string, opts: QueueOptions, callback: QueueCallback<string>): void;
     ack(ack: string, callback: QueueCallback<string>): void;
